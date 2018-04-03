@@ -22,12 +22,11 @@ public class detaljer extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
         String name = extras.getString("EXTRA_NAME");
-        /*
         String location = extras.getString("EXTRA_LOCATION");
 
         TextView nameText = (TextView) findViewById(R.id.textView);
         nameText.setText(name);
-        */
+
     }
 
 }
