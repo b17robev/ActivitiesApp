@@ -49,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(myListView.getContext(), detaljer.class);
                 Bundle extras = new Bundle();
 
-                String name = mountain_Names.get(position);
-                String location = mountain_Locations.get(position);
-                //String height = mountain_Heights.get(position);
-                String message = "hello";
+                String name = mountainNames[position];
+                String location = mountainLocations[position];
+                String height = Integer.toString(mountainHeights[position]);
                 extras.putString("EXTRA_NAME", name);
                 extras.putString("EXTRA_LOCATION", location);
+                extras.putString("EXTRA_HEIGHT", height);
+                intent.putExtras(extras);
                 myListView.getContext().startActivity(intent);
 
             }
