@@ -15,8 +15,11 @@ public class detaljer extends AppCompatActivity {
         setContentView(R.layout.activity_detaljer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Bundle extras = getIntent().getExtras();
+        String name = extras.getString("EXTRA_NAME");
+        String location = extras.getString("EXTRA_LOCATION");
     }
 
 }
