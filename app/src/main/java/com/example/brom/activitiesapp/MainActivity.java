@@ -2,6 +2,12 @@ package com.example.brom.activitiesapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
@@ -13,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        List<String> listData = new ArrayList<>(Arrays.asList(mountainNames));
+
+        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), R.layout.list_item_text_view,
+                R.id.item_textview, mountainNames);
+
+        ListView myListView = (ListView)findViewById(R.id.mylist);
+        myListView.setAdapter(adapter);
 
         // 1. Create a ListView as in previous assignment
         // 2. Create a new activity named "MountainDetailsActivity
