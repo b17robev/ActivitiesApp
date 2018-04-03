@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class detaljer extends AppCompatActivity {
 
@@ -17,9 +18,16 @@ public class detaljer extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         Bundle extras = getIntent().getExtras();
+
         String name = extras.getString("EXTRA_NAME");
+        /*
         String location = extras.getString("EXTRA_LOCATION");
+
+        TextView nameText = (TextView) findViewById(R.id.textView);
+        nameText.setText(name);
+        */
     }
 
 }

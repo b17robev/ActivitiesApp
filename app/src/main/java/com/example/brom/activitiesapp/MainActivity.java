@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 //String height = mountain_Heights.get(position);
                 String message = "hello";
                 extras.putString("EXTRA_NAME", name);
-                extras.putString("EXTRA_LOCATION", location);;
+                extras.putString("EXTRA_LOCATION", location);
                 myListView.getContext().startActivity(intent);
 
             }
